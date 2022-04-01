@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green">
+
+    <!--Image view is constraint vertically to 70% of the scree size-->
+
+    <ImageView
+        android:id="@+id/downloadPic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_button"
+        app:srcCompat="@drawable/camera" />
+
+    <AutoCompleteTextView
+        android:id="@+id/item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Short Description"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/item_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downloadPic" />
+
+    <AutoCompleteTextView
+        android:id="@+id/item_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your question"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/addComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_description" />
+
+    <AutoCompleteTextView
+        android:id="@+id/addComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your comment"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        app:layout_constraintBottom_toTopOf="@id/commentList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_question" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addComment"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.2"/>
+
+    <ImageButton
+        android:id="@+id/sendComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addComment"
+        app:srcCompat="@drawable/send"
+        app:layout_constraintTop_toBottomOf="@id/item_question"
+        app:layout_constraintBottom_toTopOf="@id/commentList"/>
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edit_button"
+        app:srcCompat="@drawable/delete_icon" />
+
+    <ImageButton
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_icon" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toTopOf="@+id/downloadPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/discard"/>
+
+    <Button
+        android:id="@+id/discard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discard"
+        app:layout_constraintBottom_toTopOf="@+id/downloadPic"
+        app:layout_constraintEnd_toStartOf="@+id/save_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myPhoto_altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:hint="Altitude"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/item_description"
+        app:layout_constraintTop_toBottomOf="@+id/downloadPic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

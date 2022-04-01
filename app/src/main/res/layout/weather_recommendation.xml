@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green">
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationW"
+        app:srcCompat="@drawable/dunno" />
+
+    <TextView
+        android:id="@+id/celcius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp"
+        android:textColor="@color/light_purple"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toTopOf="@id/weatherIcon" />
+
+    <TextView
+        android:id="@+id/locationW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Fetching location"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weather_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherIcon" />
+
+    <TextView
+        android:id="@+id/weather_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/celcius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toTopOf="@+id/weatherIcon" />
+
+    <TextView
+        android:id="@+id/weather_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Wind speed"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weather_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/celcius" />
+
+    <TextView
+        android:id="@+id/recommendations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our advice"
+        android:textColor="@color/light_purple"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/adviceText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_list" />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/refresh" />
+
+    <TextView
+        android:id="@+id/adviceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textColor="@color/light_purple"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendations" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

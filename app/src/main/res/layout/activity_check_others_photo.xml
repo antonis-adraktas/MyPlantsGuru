@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green">
+
+    <!--Image view is constraint vertically to 70% of the scree size-->
+
+    <ImageView
+        android:id="@+id/downloadPic_other"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camera" />
+
+    <AutoCompleteTextView
+        android:id="@+id/other_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Short Description"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/other_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downloadPic_other" />
+
+    <AutoCompleteTextView
+        android:id="@+id/other_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your question"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/other_addComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_description" />
+
+    <AutoCompleteTextView
+        android:id="@+id/other_addComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your comment"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        app:layout_constraintBottom_toTopOf="@id/other_commentList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/other_question" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/other_commentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/other_addComment"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.2"/>
+
+    <ImageButton
+        android:id="@+id/other_sendComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/other_addComment"
+        app:srcCompat="@drawable/send"
+        app:layout_constraintTop_toBottomOf="@id/other_question"
+        app:layout_constraintBottom_toTopOf="@id/other_commentList"/>
+
+    <TextView
+        android:id="@+id/other_altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Altitude"
+        android:textColor="@color/light_purple"
+        android:textColorHint="@color/light_purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/other_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/other_description"
+        app:layout_constraintTop_toBottomOf="@+id/downloadPic_other" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

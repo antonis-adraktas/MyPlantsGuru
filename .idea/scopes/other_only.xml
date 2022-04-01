@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="other_only" pattern="src[MyPlantsGuru.app]:com.example.myplantsguru.OthersPlants&amp;&amp;!src[MyPlantsGuru.app]:layout.*" />
+</component>

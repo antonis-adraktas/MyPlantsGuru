@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/weather_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get weather related recommendations"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload your plant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_button"
+        app:layout_constraintBottom_toTopOf="@id/myplants"/>
+
+    <Button
+        android:id="@+id/other_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check other's plants"
+        app:layout_constraintBottom_toTopOf="@id/qrCode"
+        app:layout_constraintTop_toBottomOf="@id/myplants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/myplants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Plants"
+        app:layout_constraintBottom_toTopOf="@+id/other_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_button" />
+
+    <Button
+        android:id="@+id/qrCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR Scanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

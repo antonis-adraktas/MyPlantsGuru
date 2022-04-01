@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MyPlantsGuru</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Confirm Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">Password too short or does not match</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="passwords_no_match">Confirm password needs to match the initial password</string>
+    <string name="password_too_short">you need to have at least 6 characters in your password </string>
+    <string name="error_field_required">This field is required</string>
+    <string name="plant_picture">A plant</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="invalid_email">This email address is invalid or empty. Please check and fill in correctly</string>
+    <string name="password_reset">Please check your email box. You should have received a reset password message</string>
+    <string name="password_reset_failed">Something went wrong with the password reset process. Please try again</string>
+    <string name="heatAdvice">It\'s going to be very hot in the next two days. Make sure to water your plants regularly and do it in the evenings to ensure better water absorption.</string>
+    <string name="frostAdvice">There is frost/snow in the forecast for the next two days. Cover your vulnerable plants or put them inside if possible.</string>
+    <string name="rainAdvice">There\'s rain in the forecast for the next two days. You may be able to skip your regular watering for your outside plants</string>
+    <string name="strongWindsAdvice">There are also strong winds in the forecast for the next two days. You may need to tie up your plant pots to avoid them from flipping down.</string>
+    <string name="dryAdvice">No rain at all in the forecast for the next two days. Follow your regular watering plan.</string>
+    <string name="noIdeaAdvice">There are no recommendations for this kind of weather. Maybe in a later version</string>
+    <string name="noCamera">There is no camera in the device!</string>
+    <string name="deleteConfirmation">Are you sure you want to delete this post?</string>
+    <string name="editInfo">Here you can edit your post. Edit the description , your question and click save to submit your changes.
+        Click discard to revert them. Comments and photos cannot be edited in this version of the app</string>
+    <string name="otherUploadInfo">Here you can see markers at the location people uploaded their plants. Click on them to see small description and the uploader.Click on the snippet
+        to see the actual post and be able to comment on it.
+    </string>
+</resources>
